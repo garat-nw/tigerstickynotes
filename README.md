@@ -14,3 +14,5 @@ Stores locally, designed to work with Proton drive sync API. If you don't use Pr
 Whiteboards store / author in JSON saved to Proton, however, each whiteboard can point at a local path on your computer you're running on, to create a markdown version of the whiteboard for doing things like Ralph loops with a coding agent.
 
 Use it in good health, if you like it, let me know, if you expand on it, awesome, and have fun. 
+
+MIT License.
