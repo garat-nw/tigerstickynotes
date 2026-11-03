@@ -1,0 +1,30 @@
+[package]
+name = "tiger-sticky-notes"
+version = "0.1.0"
+description = "Tiger Sticky Notes"
+edition = "2021"
+
+[lib]
+name = "tiger_sticky_notes_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-http = "2"
+tauri-plugin-dialog = "2"
+
+# OS keychain for the Proton session (Windows Credential Manager / macOS + iOS Keychain)
+[target.'cfg(windows)'.dependencies]
+keyring = { version = "3", features = ["windows-native"] }
+[target.'cfg(any(target_os = "macos", target_os = "ios"))'.dependencies]
+keyring = { version = "3", features = ["apple-native"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true

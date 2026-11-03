@@ -1,0 +1,9 @@
+{
+  "name": "Tiger Sticky Notes",
+  "short_name": "Tiger Notes",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4efe6",
+  "theme_color": "#f5b800",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
